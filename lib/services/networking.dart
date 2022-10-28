@@ -20,8 +20,8 @@ class ApiService {
         //return await Geolocator.getCurrentPosition();
         Position position = await Geolocator.getCurrentPosition(
             desiredAccuracy: LocationAccuracy.high);
-        var long = position.latitude;
-        print(long);
+       
+
         var uri =
             'https://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid=18966628b08a83615fea91c56f19fb3c&units=metric';
         var url = Uri.parse(uri);
@@ -68,22 +68,3 @@ class ApiService {
 
 final weatherProvider = Provider((ref) => ApiService());
 
-//var temp = model['main']['temp'];
-          // print(model);
-          // print(temp);
-
-          // 
-          // Map<String, dynamic> data = Map<String, dynamic>.from(json.decode(response.data));
-          // print(data);
-
-           // print(rex.length);
-          // print(model.map(((e) => WeatherModel.fromJson(e))));
-
-          //print(model);
-          // var rex = model.map(((e) => WeatherModel.fromJson(e)));
-          //print(rex.main.temp);   
-
-// log(model.toString());
-          //log(rex.main.humidity.toString());
-          //return rex;
-          // log(tempVariables.toString());

@@ -2,7 +2,7 @@
 //
 //     final weatherModel = weatherModelFromJson(jsonString);
 
-import 'package:meta/meta.dart';
+
 import 'dart:convert';
 
 WeatherModel weatherModelFromJson(String str) => WeatherModel.fromJson(json.decode(str));
